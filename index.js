@@ -33,7 +33,7 @@ app.get("/api/:time?",
 
   //Process request
   (req, res) => {
-  if (req.params.time === undefined) {
+  if (req.params.time === "") {
     date = new Date();
   } else if (isNaN(req.params.time)) {
     date = new Date(req.params.time);
